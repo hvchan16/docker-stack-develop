@@ -1,0 +1,27 @@
+Step 1: Webapp
+
+- Implementation**: Created `ProductsPage.tsx` which includes an API helper to fetch all products and an interface to define 
+the product structure.
+
+Step 2: api.products
+
+- Initial Attempt with Flask**: Attempted to create the `api.products` microservice using Flask, mirroring the structure of 
+`api.orders`. Encountered an error with `import_url` that could not be resolved.
+- Switch to Node.js**: Developed the `api.products` microservice using Node.js. This involved setting up an Express application,
+ implementing Sequelize methods for database interactions, and creating a product router.
+- Docker Integration**: Created a Dockerfile to specify the base image, working directory, and steps to install dependencies 
+and start the application.
+
+Step 3: Update Photo URLs
+
+- Modification**: Updated the photo URLs as required and ensured the data format matches the schema defined in `schema.sql`.
+
+Step 4: Nginx and Docker Compose Configuration
+
+- Nginx Configuration**: Modified `nginx.conf` to route traffic to the new endpoint.
+- Docker Compose**: Updated `docker-compose.yml` to include the new `api.products` service in the Docker Compose configuration.
+
+Step 5: Build and Start Docker Services
+
+- Build Docker Images**: Built Docker images for all services.
+- Start Application**: Launched the entire application using `docker-compose up -d`.
